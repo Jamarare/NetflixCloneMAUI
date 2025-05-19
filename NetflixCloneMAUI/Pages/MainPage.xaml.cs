@@ -1,4 +1,3 @@
-﻿using NetflixCloneMAUI.Services;
 using NetflixCloneMAUI.ViewModels;
 
 namespace NetflixCloneMAUI.Pages;
@@ -17,5 +16,15 @@ public partial class MainPage : ContentPage
     {
         base.OnAppearing();
         await _homeViewModel.InitializeAsync();
+    }
+
+    private void MovieRow_MediaSelected(object sender, Controls.MediaSelectEventArgs e)
+    {
+        _homeViewModel.SelectMediaCommand.Execute(e.Media);
+    }
+
+    private void MovieInfoBox_Closed(object sender, EventArgs e)
+    {
+        _homeViewModel.SelectMediaCommand.Execute(null);
     }
 }
