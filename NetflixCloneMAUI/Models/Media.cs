@@ -16,5 +16,7 @@ namespace NetflixCloneMAUI.Models
 
         public string Overview { get; set; }
         public string ReleaseDate { get; set; }
+
+        public string TrailerURL { get; set; }
     }
 }

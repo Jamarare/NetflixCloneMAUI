@@ -8,7 +8,7 @@ namespace NetflixCloneMAUI
         {
             InitializeComponent();
 
-            Routing.RegisterRoute(nameof(CategoriesPage), typeof(CategoriesPage));
+            //Routing.RegisterRoute(nameof(CategoriesPage), typeof(CategoriesPage));
         }
     }
 }
